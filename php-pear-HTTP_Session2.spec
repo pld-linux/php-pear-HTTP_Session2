@@ -7,7 +7,7 @@ Summary:	%{_pearname} - PHP5 Session Handler
 Summary(pl.UTF-8):	%{_pearname} - obsługa sesji w PHP5
 Name:		php-pear-%{_pearname}
 Version:	0.5.0
-Release:	1
+Release:	2
 License:	PHP License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -15,9 +15,12 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 URL:		http://pear.php.net/package/HTTP_Session2/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+Requires:	php-creole
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_noautoreq	'pear(creole/Creole.php)'
 
 %description
 PHP5 Object-oriented interface to the session_* family functions it
