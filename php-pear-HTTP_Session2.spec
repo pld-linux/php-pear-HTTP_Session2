@@ -7,7 +7,7 @@ Summary:	%{_pearname} - PHP5 Session Handler
 Summary(pl.UTF-8):	%{_pearname} - obsługa sesji w PHP5
 Name:		php-pear-%{_pearname}
 Version:	0.6.1
-Release:	1
+Release:	2
 License:	PHP License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
