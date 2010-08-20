@@ -6,12 +6,12 @@
 Summary:	%{_pearname} - PHP5 Session Handler
 Summary(pl.UTF-8):	%{_pearname} - obsługa sesji w PHP5
 Name:		php-pear-%{_pearname}
-Version:	0.7.2
+Version:	0.7.3
 Release:	1
 License:	PHP License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	3cce2f2c35fc36f726e01df10e006a48
+# Source0-md5:	eb8e2d1aa651a927c3e0d96e8d8225ce
 URL:		http://pear.php.net/package/HTTP_Session2/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -42,9 +42,9 @@ Ta klasa ma w PEAR status: %{_status}.
 Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
-AutoReq:	no
 Requires:	%{name} = %{version}-%{release}
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
