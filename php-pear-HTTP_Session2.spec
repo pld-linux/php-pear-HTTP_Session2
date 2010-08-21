@@ -1,13 +1,11 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		HTTP
-%define		_subclass	Session2
-%define		_status		alpha
+%define		_status		beta
 %define		_pearname	HTTP_Session2
 Summary:	%{_pearname} - PHP5 Session Handler
 Summary(pl.UTF-8):	%{_pearname} - obsługa sesji w PHP5
 Name:		php-pear-%{_pearname}
 Version:	0.7.3
-Release:	1
+Release:	2
 License:	PHP License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -16,8 +14,13 @@ URL:		http://pear.php.net/package/HTTP_Session2/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
+Suggests:	php-pear-DB
+Suggests:	php-pear-MDB2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+# exclude optional dependencies
+%define		_noautoreq	pear(DB.*) pear(MDB2.*)
 
 %description
 PHP5 Object-oriented interface to the session_* family functions it
