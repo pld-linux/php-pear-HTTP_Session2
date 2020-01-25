@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.php
 %define		_status		beta
 %define		_pearname	HTTP_Session2
 Summary:	%{_pearname} - PHP5 Session Handler
